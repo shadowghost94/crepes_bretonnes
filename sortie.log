@@ -1,0 +1,16 @@
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 20, 2024 - 12:07:32
+Django version 5.0, using settings 'crepes_bretonnes.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 20, 2024 - 12:12:59
+Django version 5.0, using settings 'crepes_bretonnes.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+

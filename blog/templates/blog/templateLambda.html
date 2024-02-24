@@ -1,0 +1,9 @@
+{% if envoi %} Formulaire généré en utilisant la classe models.Article{% endif %}
+
+<form action="{% url "templateLambda" %}" method='POST'>
+    {% csrf_token %}
+    {{ form.as_p }}
+   
+
+    <input type="submit" value="Envoyer">
+</form>

@@ -1,0 +1,13 @@
+<h1>Ajouter un nouveau contact</h1>
+
+{% if sauvegarde %}
+    <p>Ce contact à bien été enregistré</p>
+{% endif %}
+
+<p>
+    <form action="{% url "nouveau-contact"%}" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Envoyer">
+    </form>
+</p>

@@ -1,5 +1,7 @@
 
 from pathlib import Path
+import os
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -57,6 +60,11 @@ TEMPLATES = [
     },
 ]
 
+#il définit l'endroit où Django ira chercher prioritairement les templates
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'blog/templates'),
+    os.path.join(BASE_DIR,'templates/')
+)
 WSGI_APPLICATION = 'crepes_bretonnes.wsgi.application'
 
 
@@ -111,8 +119,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+MEDIA_ROOT = os.path.join(BASE_DIR, './media/')
